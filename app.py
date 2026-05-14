@@ -368,8 +368,8 @@ elif page == "View Transactions":
 
         styled_df = (
             df.style
-              .applymap(style_type, subset=["Type"])
-              .applymap(style_transaction_amount, subset=["Amount (₹)"])
+              .map(style_type, subset=["Type"])
+              .map(style_transaction_amount, subset=["Amount (₹)"])
               .set_properties(subset=["Amount (₹)"], **{"text-align": "left"})
               .set_properties(**{
                   "background-color": "#111827",
